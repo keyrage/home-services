@@ -17,13 +17,13 @@ spec:
         - name: data
           hostPath:
             path: /opt/data
-            type: directory
+            type: Directory
       containers:
         - name: metube
           image: ghcr.io/alexta69/metube
           ports:
             - containerPort: 8081
           volumeMounts:
-            - name: data
-            mountPath: /downloads
-            subPath: downloads
+          - name: data
+          mountPath: /downloads
+          subPath: downloads
