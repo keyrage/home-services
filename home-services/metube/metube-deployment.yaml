@@ -17,4 +17,4 @@ spec:
         - name: metube
           image: ghcr.io/alexta69/metube
           ports:
-            - containerPort: 80
+            - containerPort: 8081
