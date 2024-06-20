@@ -14,10 +14,10 @@ spec:
         app: metube
     spec:
       volumes:
-      - name: data
-        hostPath:
-          path: /opt/data
-          type: directory
+        - name: data
+          hostPath:
+            path: /opt/data
+            type: directory
       containers:
         - name: metube
           image: ghcr.io/alexta69/metube
