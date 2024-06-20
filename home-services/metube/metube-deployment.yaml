@@ -24,6 +24,6 @@ spec:
           ports:
             - containerPort: 8081
           volumeMounts:
-          - name: data
-          mountPath: /downloads
-          subPath: downloads
+          - mountPath: /downloads
+            name: data
+            subPath: downloads
