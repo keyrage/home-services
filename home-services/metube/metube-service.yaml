@@ -9,4 +9,4 @@ spec:
       port: 5600
       targetPort: 8081
   selector:
-    app: meutube
+    app: metube
