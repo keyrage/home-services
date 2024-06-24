@@ -24,6 +24,6 @@ spec:
           ports:
             - containerPort: 3001
           volumeMounts:
-          - mountPath: /downloads
+          - mountPath: /app/data
             name: data
-            subPath: downloads
+            subPath: uptime
