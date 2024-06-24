@@ -1,0 +1,16 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: uptime
+spec:
+  rules:
+    - host: "uptime.beetlestone.nz"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: uptime
+                port:
+                  number: 3001

@@ -1,0 +1,29 @@
+#Bump
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uptime-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: uptime
+  template:
+    metadata:
+      labels:
+        app: uptime
+    spec:
+      volumes:
+        - name: data
+          hostPath:
+            path: /opt/data
+            type: Directory
+      containers:
+        - name: uptime
+          image: louislam/uptime-kuma:1
+          ports:
+            - containerPort: 3001
+          volumeMounts:
+          - mountPath: /downloads
+            name: data
+            subPath: downloads
