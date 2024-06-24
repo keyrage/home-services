@@ -13,4 +13,4 @@ spec:
               service:
                 name: uptime
                 port:
-                  number: 3001
+                  number: 3000
