@@ -1,4 +1,4 @@
 # home-services
 
 Tags
-- production: deploy to production host
+- latest: deploy to production host
