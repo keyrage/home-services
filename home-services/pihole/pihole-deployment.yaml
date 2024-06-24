@@ -12,8 +12,20 @@ spec:
       labels:
         app: pihole
     spec:
+      volumes:
+        - name: data
+          hostPath:
+            path: /opt/data
+            type: Directory
       containers:
         - name: pihole
           image: pihole/pihole:2024.05.0
           ports:
             - containerPort: 80
+          volumeMounts:
+          - mountPath: /etc/pihole/
+            name: data
+            subPath: pihole/pihole
+          - mountPath: /etc/dnsmasq.d
+            name: data
+            subPath: pihole/dnsmasq.d
